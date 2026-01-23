@@ -6,17 +6,39 @@
     <title>Unitakor_online 지수법칙 </title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
     <script>
-        window.MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] } };
+        window.MathJax = {
+            tex: {
+              inlineMath: [['$', '$'], ['\\(', '\\)']],
+              displayMath: [['$$', '$$']]
+            },
+            chtml: {
+              linebreaks: { automatic: true }
+            }
+          };
     </script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <style>
         body { margin: 0; padding: 0; overflow: hidden; font-family: 'Pretendard'; }
+        /* ===== MathJax 줄바꿈 문제 해결용 ===== */
+        /* MathJax 컨테이너가 화면을 넘지 않게 */
+        .mjx-container {
+            max-width: 100% !important;
+            overflow-x: auto;
+        }
+        /* 수식 내부 줄바꿈 허용 */
+        .mjx-math {
+            white-space: normal !important;
+            word-break: break-word !important;
+            overflow-wrap: break-word !important;
+        }
+        /* 가운데 정렬 유지 */
+        .MathJax_Display {
+          text-align: center !important;
+        }
     </style>
-  <script type="module" crossorigin src="/unitakor_online/assets/index-D337x1_8.js"></script>
+  <script type="module" crossorigin src="/assets/index-CxwtXKOd.js"></script>
 </head>
 <body>
-    <div id="root"></div>
-
+    <div id="root"></div>
 </body>
-
 </html>
